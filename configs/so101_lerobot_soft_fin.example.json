@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "robot_model": "../../../target/so101-lerobot-soft-fin/robot/robot.json",
+  "initialization": "../../../target/so101-lerobot-soft-fin/initialization.json",
+  "cache_directory": "../../../target/so101-lerobot-soft-fin/cache",
+  "model_divides": 2,
+  "model_points": 200,
+  "model_image_size": 512,
+  "correspondence_iterations": 3,
+  "update_iterations": 2
+}

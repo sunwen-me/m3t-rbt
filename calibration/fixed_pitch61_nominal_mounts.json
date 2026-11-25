@@ -1,0 +1,474 @@
+{
+  "schema_version": 1,
+  "record_type": "nominal-mount-prior-not-runtime-initialization",
+  "capture_pitch_deg": -61.0,
+  "joint_angles_source": "fresh v2 encoder feedback required; no zero/historical values fabricated",
+  "solver_accepted": false,
+  "runtime_modified": false,
+  "motor_commands": false,
+  "units": {
+    "translation": "m",
+    "rotation": "3x3 rotation matrix",
+    "explanatory_measurements": "mm"
+  },
+  "frames": {
+    "world": "base_footprint",
+    "camera": "orbbec335/color_optical",
+    "arm_base": "official SO101 base_link",
+    "N": {
+      "origin_world_m": [
+        -0.14694300035317245,
+        0.012122728579218823,
+        1.3501241900878909
+      ],
+      "rotation_world_N": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "axes": "base_footprint +X forward, +Y left, +Z up; not camera_pitch_base local axes"
+    }
+  },
+  "transform_convention": "T_A_B maps B coordinates to A; pose4x4 and rowmajor16 are T_C_base, flattened in C/row-major order",
+  "T_world_C": [
+    [
+      -0.008604503462207478,
+      -0.8548010691339424,
+      0.5188844714651213,
+      -0.12193002044314015
+    ],
+    [
+      -0.9998538314498757,
+      -0.0003120846889934139,
+      -0.017094394933766268,
+      -0.011904457307392972
+    ],
+    [
+      0.014774242964481996,
+      -0.5189557156546373,
+      -0.8546734387672354,
+      1.308938374151344
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "T_world_camera_pitch_base": [
+    [
+      0.9991860443110977,
+      0.00860450346220714,
+      -0.03941080275901518,
+      -0.14694300035317245
+    ],
+    [
+      -0.008014571696890104,
+      0.9998538314498755,
+      0.015102396350251127,
+      0.012122728579218823
+    ],
+    [
+      0.0395349907608,
+      -0.014774242964481661,
+      0.9991089561456101,
+      1.3501241900878909
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "shoulder_in_base_mm": [
+    38.835300000000004,
+    -8.97657e-06,
+    62.4
+  ],
+  "construction": "p_world_base = O + p_N_S_mm/1000 - shoulder_in_base_mm/1000; R_world_base = I; T_C_base = inverse(T_world_C) @ T_world_base",
+  "assumptions": [
+    "Both base fronts face robot forward, confirmed by user; official base_link +X faces front. Both bases use the same rotation; no left/right mirror.",
+    "Horizontal mounting planes and zero nominal base roll/pitch are rough assumptions, not measured installation rotations.",
+    "Signed shoulder layout is normalized from user-confirmed left/right, both-below placement and the prior illustrative convention; it is not a rigorous raw Fusion axis conversion.",
+    "+X forward offsets of 60.292/60.681 mm remain rough assumptions; raw Fusion signs and point-selection order are unverified.",
+    "Shoulder measurement is assumed to refer to S, not the raised servo cap 1.5 mm above S.",
+    "-61 degrees is the saved configuration preview angle, not a newly measured hardware angle. This base-only prior supplies no runtime mode or joint seed."
+  ],
+  "source": {
+    "generator": {
+      "path": "/home/sw/rbt_robot_ws/target/so101-lerobot-soft-fin/arm-shoulder-measurements/generate_fixed_pitch61_mounts.py",
+      "sha256": "8c08093b74a86adc562a7334b690731071abfa246ce22a35766ec41328c993ef"
+    },
+    "preview": {
+      "path": "/home/sw/rbt_robot_ws/target/so101-lerobot-soft-fin/arm-shoulder-measurements/fixed-pitch61-preview-state.json",
+      "sha256": "a0117b5204b04deafd1c702847c795576043963430c2784e731aeddbe371d82e",
+      "snapshot_utc": "2026-11-15T07:33:41.683657+00:00",
+      "mode": "configuration_snapshot",
+      "model_id": "rig-gimbal"
+    },
+    "cap_deployment_record": {
+      "path": "/home/sw/rbt_robot_ws/deploy/20261113-gemini335-cap-origin.json",
+      "sha256": "7793ddd63668251763438b0985ecfc7efea3ccaf547ba377afc72859823440f5"
+    },
+    "static_config": {
+      "path_as_recorded": "/home/aidlux/rbt-work/src/static_tf_rbt/config/robot.yaml",
+      "sha256_as_recorded": "a40eda84cf77c53a394f3b98ea87a01ca0ab7e036edb2d55d4ab54e62faec8b3",
+      "hash_field": "activation.after_sha256",
+      "verification_scope": "local cap record and saved relevant edges checked; active hardware config not queried"
+    },
+    "urdf": {
+      "path": "/home/sw/rbt_robot_ws/perception/m3t/models/so101_lerobot_soft_fin/so101_lerobot_soft_fin.urdf",
+      "sha256": "1d6a4d93e22b45c30f00479caf509449f934c48ff53bd344cd56a4a5360b6906"
+    },
+    "model_json": {
+      "path": "/home/sw/rbt_robot_ws/target/so101-lerobot-soft-fin/robot/robot.json",
+      "sha256": "b37ebc07af91f8d2fd07d267fc0f86675158f4921777ed1d2d6baf2e5abfb02c"
+    },
+    "user_measurements": {
+      "path": "/home/sw/rbt_robot_ws/target/so101-lerobot-soft-fin/arm-shoulder-measurements/user-measurements.json",
+      "sha256": "7fdffc6677b497ec4ca323823d0e77c25ff46cc6b66a7a0b81724769b7bd99f3",
+      "complete_record": {
+        "recorded_at_utc": "2026-11-13T14:59:41.709164+00:00",
+        "status": "USER_CONFIRMED_ARM_LABEL_SWAP_APPLIED_AXES_AND_BASE_ORIENTATION_PENDING",
+        "motor_reference": "User previously selected DM3510 central cap top-face center",
+        "arm_reference": "User-selected shoulder_link origin S; confirm same 20mm-circle plane rather than central raised servo cap",
+        "reported_relation": "User describes gimbal face center relative to shoulder_link; Fusion axes and point-selection order are not verified",
+        "measurements": {
+          "left": {
+            "reported_distance_mm": 530.434,
+            "reported_xyz_increment_mm": [
+              60.292,
+              -82.331,
+              520.525
+            ],
+            "norm_of_xyz_mm": 530.4335909894847,
+            "norm_minus_reported_distance_mm": -0.0004090105152272372
+          },
+          "right": {
+            "reported_distance_mm": 545.123,
+            "reported_xyz_increment_mm": [
+              60.681,
+              150.0,
+              -520.525
+            ],
+            "norm_of_xyz_mm": 545.094908603997,
+            "norm_minus_reported_distance_mm": -0.028091396002992042
+          }
+        },
+        "runtime_modified": false,
+        "installation_layout_confirmation": {
+          "confirmed_date": "2026-11-14",
+          "timezone": "Asia/Shanghai",
+          "arms_below_gimbal": true,
+          "arms_on_opposite_sides": true,
+          "left_shoulder_to_gimbal_cap_distance_shorter_than_right": true,
+          "source": "User explicitly confirmed that left shoulder-axis center is closer in straight-line distance to the gimbal face center.",
+          "numeric_pair_reassignment_confirmed": true,
+          "raw_measurement_labels_preserved": true
+        },
+        "original_measurements_as_reported": {
+          "right": {
+            "reported_distance_mm": 530.434,
+            "reported_xyz_increment_mm": [
+              60.292,
+              -82.331,
+              520.525
+            ],
+            "norm_of_xyz_mm": 530.4335909894847,
+            "norm_minus_reported_distance_mm": -0.0004090105152272372
+          },
+          "left": {
+            "reported_distance_mm": 545.123,
+            "reported_xyz_increment_mm": [
+              60.681,
+              150.0,
+              -520.525
+            ],
+            "norm_of_xyz_mm": 545.094908603997,
+            "norm_minus_reported_distance_mm": -0.028091396002992042
+          }
+        },
+        "arm_label_correction": {
+          "applied": true,
+          "confirmed_date": "2026-11-14",
+          "timezone": "Asia/Shanghai",
+          "source": "User explicitly stated that the two arm labels were reversed.",
+          "operation": "Swap complete left/right measurement records; preserve all signed vector components.",
+          "coordinate_axis_signs_verified": false,
+          "point_selection_order_verified": false
+        },
+        "resolved_original_label_conflict": {
+          "original_right_distance_mm": 530.434,
+          "original_left_distance_mm": 545.123,
+          "original_labels_imply": "right closer than left",
+          "latest_user_confirmation": "left closer than right",
+          "hypothesis": "The original two arm labels may have been exchanged, or measurement endpoints differ. Neither is established.",
+          "policy": "Do not silently swap full vectors, flip individual axes, assign base orientation, or publish an installation TF from this conflict.",
+          "resolved_by": "User confirmed complete arm-label swap."
+        },
+        "base_orientation_confirmation": {
+          "confirmed_date": "2026-11-15",
+          "timezone": "Asia/Shanghai",
+          "user_statement": "底座朝向就是朝前的啊",
+          "both_base_fronts_face_robot_forward": true,
+          "nominal_model_mapping": "official base_link +X -> robot forward; no left/right mirror",
+          "upright_level_mount_assumed_for_rough_initialization": true,
+          "precise_roll_pitch_measured": false
+        }
+      }
+    },
+    "distance_comparison": {
+      "path": "/home/sw/rbt_robot_ws/target/so101-lerobot-soft-fin/arm-shoulder-measurements/current-tf-distance-comparison.json",
+      "sha256": "3e6bea102cdb256cf83ccd497810ddc45d7fff1c375b46cec0a0c6fe7d5ef181",
+      "status": "HISTORICAL_TF_DISTANCE_COMPARISON_WITH_USER_CONFIRMED_CORRECTED_ARM_LABELS"
+    },
+    "historical_registration": {
+      "old_mounts": {
+        "path": "/home/sw/rbt_robot_ws/target/so101-lerobot-soft-fin/static-tf-new-left/robot.before.json",
+        "sha256": "1be8ec106f0c7bbd823fc7b7731c787a6d8f9aa18da9d675989467ddc3d6cbc8"
+      },
+      "old_rotation_rpy_deg_both": [
+        0,
+        0,
+        90
+      ],
+      "frame_conversion": {
+        "path": "/home/sw/rbt_robot_ws/target/so101-lerobot-soft-fin/legacy-frame-migration/frame-conversion-report.json",
+        "sha256": "dc2f5514b3c08fed47f6998762f0fa9412c9b898aaabbad2c9a13f8654023925"
+      },
+      "R_old_base_from_official_base": [
+        [
+          -3.6732051033465748e-06,
+          0.999999999993254,
+          0.0
+        ],
+        [
+          -0.9999999999932538,
+          -3.6732051033465748e-06,
+          -6.177235059483627e-23
+        ],
+        [
+          5.784787460784956e-22,
+          1.9775350127189465e-27,
+          1.0000000000000002
+        ]
+      ],
+      "interpretation": "Old nominal +90 degree yaw composed with approximately -90 degree old-from-official rotation supports equal forward nominal orientations; no precise installation acceptance."
+    },
+    "model_limit_revision": {
+      "date": "2026-11-15",
+      "joint": "elbow_flex",
+      "old_upper_rad": 1.69,
+      "new_upper_rad": 1.74532925199433,
+      "kinematics_and_mount_poses_unchanged": true
+    }
+  },
+  "verification": {
+    "proper_SE3_and_positive_optical_depth": true,
+    "shoulder_and_distance_recovery": true,
+    "same_base_rotation": true,
+    "distance_tolerance_mm": 0.05
+  },
+  "arms": [
+    {
+      "name": "so101_left",
+      "nominal_shoulder_in_N_mm": [
+        60.292,
+        82.331,
+        -520.525
+      ],
+      "T_world_base": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.12548630035317246
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.09445373755578883
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.7671991900878908
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose4x4": [
+        [
+          -0.00860450346220706,
+          -0.9998538314498745,
+          0.014774242964481935,
+          -0.11431583494597988
+        ],
+        [
+          -0.8548010691339419,
+          -0.00031208468899307675,
+          -0.5189557156546363,
+          0.28414536506887744
+        ],
+        [
+          0.5188844714651212,
+          -0.017094394933766494,
+          -0.8546734387672341,
+          0.45934666394953416
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rowmajor16": [
+        -0.00860450346220706,
+        -0.9998538314498745,
+        0.014774242964481935,
+        -0.11431583494597988,
+        -0.8548010691339419,
+        -0.00031208468899307675,
+        -0.5189557156546363,
+        0.28414536506887744,
+        0.5188844714651212,
+        -0.017094394933766494,
+        -0.8546734387672341,
+        0.45934666394953416,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "verification": {
+        "rotation_determinant": 0.9999999999999983,
+        "base_camera_depth_m": 0.45934666394953416,
+        "shoulder_camera_depth_m": 0.426166075638597,
+        "recovered_shoulder_in_N_mm": [
+          60.29200000000004,
+          82.33099999999999,
+          -520.5249999999997
+        ],
+        "shoulder_recovery_max_error_mm": 2.2737367544323206e-13,
+        "cap_to_shoulder_distance_mm": 530.4335909894845,
+        "reported_distance_mm": 530.434,
+        "distance_minus_reported_mm": -0.00040901051545461087,
+        "reported_distance_tolerance_mm": 0.05
+      }
+    },
+    {
+      "name": "so101_right",
+      "nominal_shoulder_in_N_mm": [
+        60.681,
+        -150.0,
+        -520.525
+      ],
+      "T_world_base": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.12509730035317246
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.1378772624442112
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.7671991900878908
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose4x4": [
+        [
+          -0.00860450346220706,
+          -0.9998538314498745,
+          0.014774242964481935,
+          0.11797785841675412
+        ],
+        [
+          -0.8548010691339419,
+          -0.00031208468899307675,
+          -0.5189557156546363,
+          0.2838853544008628
+        ],
+        [
+          0.5188844714651212,
+          -0.017094394933766494,
+          -0.8546734387672341,
+          0.46352006787829103
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rowmajor16": [
+        -0.00860450346220706,
+        -0.9998538314498745,
+        0.014774242964481935,
+        0.11797785841675412,
+        -0.8548010691339419,
+        -0.00031208468899307675,
+        -0.5189557156546363,
+        0.2838853544008628,
+        0.5188844714651212,
+        -0.017094394933766494,
+        -0.8546734387672341,
+        0.46352006787829103,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "verification": {
+        "rotation_determinant": 0.9999999999999983,
+        "base_camera_depth_m": 0.46352006787829103,
+        "shoulder_camera_depth_m": 0.43033947956735386,
+        "recovered_shoulder_in_N_mm": [
+          60.68100000000001,
+          -150.0,
+          -520.5249999999999
+        ],
+        "shoulder_recovery_max_error_mm": 1.1368683772161603e-13,
+        "cap_to_shoulder_distance_mm": 545.0949086039969,
+        "reported_distance_mm": 545.123,
+        "distance_minus_reported_mm": -0.02809139600310573,
+        "reported_distance_tolerance_mm": 0.05
+      }
+    }
+  ]
+}

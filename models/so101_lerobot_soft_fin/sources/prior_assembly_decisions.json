@@ -1,0 +1,137 @@
+{
+  "status": "GEOMETRIC_ASSEMBLY_CANDIDATE_NOT_PHYSICAL_INSTALLATION_ACCEPTANCE",
+  "fin_choice": "A/A: long flat gripping faces inward at joint6=0, consistent with parallel-jaw use and provided photos; B/B remains mechanically possible.",
+  "bracket_choice": "User corrected: exact 180-degree rotation about gripper_camera_mount local Z through mounting-hole midpoint; hole pair swapped/re-aligned. Near discovery candidate B.",
+  "fin_geometry_evidence": "10mm screw pair; 24.137mm host slot vs24.087mm fin cap spacing; ~0.203mm backing gap.",
+  "camera_board_issue": "Bracket27mm hole grid vs legacy camera mesh34mm grid; legacy board geometry and camera fixed transforms NOT accepted as actual new hardware.",
+  "camera_tracking_policy": "Exclude camera_module and handeye_cam visuals when generating tracking model. Frames retained only for compatibility; no new camera calibration claim.",
+  "scope": "Visual URDF geometry variant only; original 6 revolute joints retained, no deployment/motor commands.",
+  "source_evidence": [
+    "mating_candidates.json",
+    "installation_candidates.json"
+  ],
+  "assembly_source": {
+    "schema_version": 1,
+    "fixed_camera_joints": null,
+    "fixed_fin": {
+      "parent_link": "gripper",
+      "mesh_source_npz": "sources/source_finger_fin.npz",
+      "T_parent_from_source_m": [
+        [
+          -0.0867219338974965,
+          0.996193570120021,
+          -0.00881345747167762,
+          -0.10691272972833525
+        ],
+        [
+          -0.10147889988852546,
+          -3.261089668243198e-05,
+          0.9948376911908511,
+          0.0006571118736587067
+        ],
+        [
+          0.991050623862622,
+          0.08716862846263093,
+          0.10109545565182902,
+          -0.16497151418080291
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "moving_fin": {
+      "parent_link": "jaw",
+      "mesh_source_npz": "sources/source_finger_fin.npz",
+      "T_parent_from_source_m": [
+        [
+          0.052060433728774454,
+          -0.9986300313596556,
+          0.005269886771721888,
+          0.08721674646032102
+        ],
+        [
+          0.9934828666834442,
+          0.05232646711629778,
+          0.101260725089116,
+          -0.14156711219489154
+        ],
+        [
+          -0.10139775562811229,
+          -3.613505076179758e-05,
+          0.9948459648849357,
+          0.01791472686486218
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "bracket": {
+      "mesh_source_npz": "sources/bracket_34_raw_mm.npz",
+      "T_mount_link_from_source_m": [
+        [
+          0.0002251587449946388,
+          0.42262545229528337,
+          0.9063044060224728,
+          -0.007777407212286692
+        ],
+        [
+          0.9999997337782935,
+          -0.000724205482472675,
+          8.92735200166504e-05,
+          0.032374341670975026
+        ],
+        [
+          0.0006940798814056975,
+          0.9063041446438532,
+          -0.42262550284441175,
+          0.0740077948466826
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "user_bracket_correction": {
+    "rotation_axis_frame": "gripper_camera_mount",
+    "rotation_axis": [
+      0,
+      0,
+      1
+    ],
+    "rotation_degrees": 180,
+    "pivot_m": [
+      0.003500453343556564,
+      0.03894942388866614,
+      0.04597964986733731
+    ],
+    "raw_hole_reference_points_mm": [
+      [
+        2.508158969184235,
+        -20.637482926828408,
+        22.066725109254648
+      ],
+      [
+        10.608173040110152,
+        -20.64346658059721,
+        22.067616008132628
+      ]
+    ],
+    "screw_pair_swap_residual_mm": [
+      0.00017746999133455565,
+      0.00017746999133455565
+    ],
+    "camera_extrinsic_verified": false
+  }
+}

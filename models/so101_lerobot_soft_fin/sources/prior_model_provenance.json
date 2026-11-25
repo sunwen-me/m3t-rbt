@@ -1,0 +1,787 @@
+{
+  "status": "GEOMETRIC_ASSEMBLY_CANDIDATE_CAMERA_UNVERIFIED_NOT_DEPLOYED",
+  "source_urdf": "/home/sw/so101_sim/so101_new_calib_with_handeye.urdf",
+  "source_sha256": "d569d3c3ab711a503daa29c71d35463f1d2dadfa37785fee8f3341fbb5e7430a",
+  "upstream_commit": "b017b5e6354bd9f61f4247a920c72622ca0aade0",
+  "preserve": "Original revolute joint names, origins, axes, limits, encoder conventions, camera optical reference transforms unless explicitly justified.",
+  "original_assets_copied": [
+    {
+      "relative_path": "assets/base_motor_holder_so101_v1.stl",
+      "sha256": "8cd2f241037ea377af1191fffe0dd9d9006beea6dcc48543660ed41647072424"
+    },
+    {
+      "relative_path": "assets/base_so101_v2.stl",
+      "sha256": "bb12b7026575e1f70ccc7240051f9d943553bf34e5128537de6cd86fae33924d"
+    },
+    {
+      "relative_path": "assets/sts3215_03a_v1.stl",
+      "sha256": "a37c871fb502483ab96c256baf457d36f2e97afc9205313d9c5ab275ef941cd0"
+    },
+    {
+      "relative_path": "assets/waveshare_mounting_plate_so101_v2.stl",
+      "sha256": "e197e24005a07d01bbc06a8c42311664eaeda415bf859f68fa247884d0f1a6e9"
+    },
+    {
+      "relative_path": "assets/motor_holder_so101_base_v1.stl",
+      "sha256": "31242ae6fb59d8b15c66617b88ad8e9bded62d57c35d11c0c43a70d2f4caa95b"
+    },
+    {
+      "relative_path": "assets/rotation_pitch_so101_v1.stl",
+      "sha256": "9be900cc2a2bf718102841ef82ef8d2873842427648092c8ed2ca1e2ef4ffa34"
+    },
+    {
+      "relative_path": "assets/upper_arm_so101_v1.stl",
+      "sha256": "475056e03a17e71919b82fd88ab9a0b898ab50164f2a7943652a6b2941bb2d4f"
+    },
+    {
+      "relative_path": "assets/under_arm_so101_v1.stl",
+      "sha256": "d01d1f2de365651dcad9d6669e94ff87ff7652b5bb2d10752a66a456a86dbc71"
+    },
+    {
+      "relative_path": "assets/motor_holder_so101_wrist_v1.stl",
+      "sha256": "887f92e6013cb64ea3a1ab8675e92da1e0beacfd5e001f972523540545e08011"
+    },
+    {
+      "relative_path": "assets/sts3215_03a_no_horn_v1.stl",
+      "sha256": "75ef3781b752e4065891aea855e34dc161a38a549549cd0970cedd07eae6f887"
+    },
+    {
+      "relative_path": "assets/wrist_roll_pitch_so101_v2.stl",
+      "sha256": "6c7ec5525b4d8b9e397a30ab4bb0037156a5d5f38a4adf2c7d943d6c56eda5ae"
+    },
+    {
+      "relative_path": "assets/wrist_roll_follower_so101_v1.stl",
+      "sha256": "4b17b410a12d64ec39554abc3e8054d8a97384b2dc4a8d95a5ecb2a93670f5f4"
+    },
+    {
+      "relative_path": "assets/gripper_camera_mount.STL",
+      "sha256": "b6f8dcf71c4487921aa8f55aa69d8a08833b814aabeb9dc83bacc875802037ea"
+    },
+    {
+      "relative_path": "assets/camera_module.STL",
+      "sha256": "d5bf50927adf73e0c5dc11fadc525d563631669a8a2d69c8513bf86675216e01"
+    },
+    {
+      "relative_path": "assets/camera_fov_cone_with_F.stl",
+      "sha256": "7be9aa02bc38d87d14246c27aad3b8588f857a4366e52954dc547e4874de192c"
+    },
+    {
+      "relative_path": "assets/moving_jaw_so101_v1.stl",
+      "sha256": "785a9dded2f474bc1d869e0d3dae398a3dcd9c0c345640040472210d2861fa9d"
+    }
+  ],
+  "robot_commands_issued": false,
+  "build_schema_version": 1,
+  "numpy_version": "2.3.5",
+  "assembly_status": {
+    "fixed_fin": "EXPLICIT_TRANSFORM_APPLIED_RIGID_NEUTRAL_ONLY",
+    "moving_fin": "EXPLICIT_TRANSFORM_APPLIED_RIGID_NEUTRAL_ONLY",
+    "bracket_34": "EXPLICIT_TRANSFORM_APPLIED_CAMERA_POSE_UNVERIFIED",
+    "camera_pose": "ORIGINAL_FIXED_JOINT_PLACEHOLDERS_RETAINED_UNVERIFIED_FOR_NEW_HARDWARE"
+  },
+  "assembly": {
+    "schema_version": 1,
+    "fixed_camera_joints": null,
+    "fixed_fin": {
+      "parent_link": "gripper",
+      "mesh_source_npz": "sources/source_finger_fin.npz",
+      "T_parent_from_source_m": [
+        [
+          -0.0867219338974965,
+          0.996193570120021,
+          -0.00881345747167762,
+          -0.10691272972833525
+        ],
+        [
+          -0.10147889988852546,
+          -3.261089668243198e-05,
+          0.9948376911908511,
+          0.0006571118736587067
+        ],
+        [
+          0.991050623862622,
+          0.08716862846263093,
+          0.10109545565182902,
+          -0.16497151418080291
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "moving_fin": {
+      "parent_link": "jaw",
+      "mesh_source_npz": "sources/source_finger_fin.npz",
+      "T_parent_from_source_m": [
+        [
+          0.052060433728774454,
+          -0.9986300313596556,
+          0.005269886771721888,
+          0.08721674646032102
+        ],
+        [
+          0.9934828666834442,
+          0.05232646711629778,
+          0.101260725089116,
+          -0.14156711219489154
+        ],
+        [
+          -0.10139775562811229,
+          -3.613505076179758e-05,
+          0.9948459648849357,
+          0.01791472686486218
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "bracket": {
+      "mesh_source_npz": "sources/bracket_34_raw_mm.npz",
+      "T_mount_link_from_source_m": [
+        [
+          0.0002251587449946388,
+          0.42262545229528337,
+          0.9063044060224728,
+          -0.007777407212286692
+        ],
+        [
+          0.9999997337782935,
+          -0.000724205482472675,
+          8.92735200166504e-05,
+          0.032374341670975026
+        ],
+        [
+          0.0006940798814056975,
+          0.9063041446438532,
+          -0.42262550284441175,
+          0.0740077948466826
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "source_inputs": {
+    "schema_version": 1,
+    "inputs": [
+      {
+        "path": "sources/original_with_handeye.urdf",
+        "source_path": "/home/sw/so101_sim/so101_new_calib_with_handeye.urdf",
+        "sha256": "d569d3c3ab711a503daa29c71d35463f1d2dadfa37785fee8f3341fbb5e7430a"
+      },
+      {
+        "path": "sources/fixed_palm_raw_mm.npz",
+        "source_path": "/home/sw/.codex/visualizations/2026/11/01/print-urdf-audit/extraction/mesh_8ae5c83556c98456ceeb2f97.npz",
+        "sha256": "b12deda1d011df117dd2b400f0a3e3d3852588df275fcef7ad5364ccf76b52a8"
+      },
+      {
+        "path": "sources/moving_jaw_raw_mm.npz",
+        "source_path": "/home/sw/.codex/visualizations/2026/11/01/print-urdf-audit/extraction/mesh_e27eebfd6f5684b099a1e071.npz",
+        "sha256": "1142dc9ff211f9f08ad9f0e218c8ba2842b7bf6dd628c0735520e47485c0476a"
+      },
+      {
+        "path": "sources/source_finger_fin.npz",
+        "source_path": "/home/sw/.codex/visualizations/2026/11/01/print-urdf-audit/upstream/soft_fin_matching/source_finger_fin.npz",
+        "sha256": "0f4f8f4b366736bb37376bd4468b09ebf92b6a8661d17567d08425c8cbfce928"
+      },
+      {
+        "path": "sources/priority_geometry_supplement.json",
+        "source_path": "/home/sw/.codex/visualizations/2026/11/01/print-urdf-audit/matching/priority_geometry_supplement.json",
+        "sha256": "ad1327646a06ad4c062909ca5db3961f8f5dd1bed218d2ff33c3dc88e09cd598"
+      },
+      {
+        "path": "sources/small_jaw_supplement.json",
+        "source_path": "/home/sw/.codex/visualizations/2026/11/01/print-urdf-audit/matching/small_jaw_supplement.json",
+        "sha256": "89af7e8475ac64d6d5826dfc60b26bb02fce5b56c6f4bdf540fb3d2939fee3e3"
+      },
+      {
+        "path": "sources/bracket_34_raw_mm.npz",
+        "source_path": "/home/sw/.codex/visualizations/2026/11/01/print-urdf-audit/extraction/mesh_f58fcc52d1f7711d2dc396da.npz",
+        "sha256": "2c6233208b37e1e477afce6b96bbf5f575dc77fbd50c2c7764a2515228070ccf"
+      },
+      {
+        "path": "sources/staged_provenance.json",
+        "source_path": "staged model provenance before core implementation",
+        "sha256": "8795b7850dc53710f004b5ded5277fe25fcda18cc6a2c1e139bc9136600f084c"
+      }
+    ],
+    "fin_source_note": "Raw upstream source_finger_fin component coordinates in mm; no centering or placement inferred.",
+    "bracket_source": {
+      "key": "3D/Objects/object_1478.model#187",
+      "names": [
+        "组合体.stl"
+      ],
+      "npz": "mesh_f58fcc52d1f7711d2dc396da.npz",
+      "role": "Primary-confirmed #34 / object187; attachment transform still pending"
+    }
+  },
+  "assembly_input_sha256": "0bb074e2583e735dfedf2496a26eb1233db58ca730ba0247a9de61d48114b77b",
+  "assembly_decisions": {
+    "status": "GEOMETRIC_ASSEMBLY_CANDIDATE_NOT_PHYSICAL_INSTALLATION_ACCEPTANCE",
+    "fin_choice": "A/A: long flat gripping faces inward at joint6=0, consistent with parallel-jaw use and provided photos; B/B remains mechanically possible.",
+    "bracket_choice": "User corrected: exact 180-degree rotation about gripper_camera_mount local Z through mounting-hole midpoint; hole pair swapped/re-aligned. Near discovery candidate B.",
+    "fin_geometry_evidence": "10mm screw pair; 24.137mm host slot vs24.087mm fin cap spacing; ~0.203mm backing gap.",
+    "camera_board_issue": "Bracket27mm hole grid vs legacy camera mesh34mm grid; legacy board geometry and camera fixed transforms NOT accepted as actual new hardware.",
+    "camera_tracking_policy": "Exclude camera_module and handeye_cam visuals when generating tracking model. Frames retained only for compatibility; no new camera calibration claim.",
+    "scope": "Visual URDF geometry variant only; original 6 revolute joints retained, no deployment/motor commands.",
+    "source_evidence": [
+      "mating_candidates.json",
+      "installation_candidates.json"
+    ],
+    "assembly_source": {
+      "schema_version": 1,
+      "fixed_camera_joints": null,
+      "fixed_fin": {
+        "parent_link": "gripper",
+        "mesh_source_npz": "sources/source_finger_fin.npz",
+        "T_parent_from_source_m": [
+          [
+            -0.0867219338974965,
+            0.996193570120021,
+            -0.00881345747167762,
+            -0.10691272972833525
+          ],
+          [
+            -0.10147889988852546,
+            -3.261089668243198e-05,
+            0.9948376911908511,
+            0.0006571118736587067
+          ],
+          [
+            0.991050623862622,
+            0.08716862846263093,
+            0.10109545565182902,
+            -0.16497151418080291
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "moving_fin": {
+        "parent_link": "jaw",
+        "mesh_source_npz": "sources/source_finger_fin.npz",
+        "T_parent_from_source_m": [
+          [
+            0.052060433728774454,
+            -0.9986300313596556,
+            0.005269886771721888,
+            0.08721674646032102
+          ],
+          [
+            0.9934828666834442,
+            0.05232646711629778,
+            0.101260725089116,
+            -0.14156711219489154
+          ],
+          [
+            -0.10139775562811229,
+            -3.613505076179758e-05,
+            0.9948459648849357,
+            0.01791472686486218
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "bracket": {
+        "mesh_source_npz": "sources/bracket_34_raw_mm.npz",
+        "T_mount_link_from_source_m": [
+          [
+            0.0002251587449946388,
+            0.42262545229528337,
+            0.9063044060224728,
+            -0.007777407212286692
+          ],
+          [
+            0.9999997337782935,
+            -0.000724205482472675,
+            8.92735200166504e-05,
+            0.032374341670975026
+          ],
+          [
+            0.0006940798814056975,
+            0.9063041446438532,
+            -0.42262550284441175,
+            0.0740077948466826
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    "user_bracket_correction": {
+      "rotation_axis_frame": "gripper_camera_mount",
+      "rotation_axis": [
+        0,
+        0,
+        1
+      ],
+      "rotation_degrees": 180,
+      "pivot_m": [
+        0.003500453343556564,
+        0.03894942388866614,
+        0.04597964986733731
+      ],
+      "raw_hole_reference_points_mm": [
+        [
+          2.508158969184235,
+          -20.637482926828408,
+          22.066725109254648
+        ],
+        [
+          10.608173040110152,
+          -20.64346658059721,
+          22.067616008132628
+        ]
+      ],
+      "screw_pair_swap_residual_mm": [
+        0.00017746999133455565,
+        0.00017746999133455565
+      ],
+      "camera_extrinsic_verified": false
+    }
+  },
+  "assembly_decisions_sha256": "79435e4851e9678cb63e9afa7abc0a419f9ea29225a4061ed158b3ac10e5b522",
+  "assembly_decisions_apply_to_this_build": true,
+  "stage_completion": {
+    "core_mesh_replacements_built": true,
+    "explicit_attachment_geometry_complete": true,
+    "physical_installation_verified": false,
+    "new_camera_pose_calibrated": false,
+    "deployment_verified": false
+  },
+  "camera_board_compatibility": {
+    "legacy_board_width_mm": 38.0,
+    "legacy_board_hole_pitch_mm": 34.0,
+    "new_bracket_hole_pitch_mm": 27.0,
+    "legacy_board_match_accepted": false,
+    "basis": "Primary-provided board/bracket mismatch; no replacement camera geometry or calibration inferred"
+  },
+  "tracking_conversion_policy": {
+    "exclude_visual_links": [
+      "camera_module",
+      "handeye_cam"
+    ],
+    "retain_legacy_camera_frames": true,
+    "reason": "Legacy 38mm board / 34mm hole pattern mismatches new bracket 27mm grid; camera/FOV visuals are not accepted actual hardware",
+    "converter_executed_by_builder": false
+  },
+  "inertial_policy": "Original inertial values retained UNVALIDATED; visual-tracking model only, not dynamics/collision safety.",
+  "fin_policy": "Canonical raw source axes and print-layout offset retained, mm->m only. Optional full explicit transform baked into parent-frame fin mesh; identity fixed joint. TPU shown rigid-neutral; deformation/contact not modeled.",
+  "bracket_policy": "#34 confirmed by primary; object187 raw mesh retained. No shape-ICP bracket registration used. Original camera links, references and joints remain unchanged as UNVERIFIED legacy compatibility frames. Legacy 38mm camera board / 34mm hole pitch mismatches bracket 27mm grid; exclude camera_module and handeye_cam visuals from M3T conversion. No replacement camera calibration inferred.",
+  "geometry_evidence": {
+    "fixed_palm.stl": {
+      "source": "sources/fixed_palm_raw_mm.npz",
+      "transform_raw_mm_to_old_asset_mm": [
+        [
+          3.292961749252422e-05,
+          -1.2965472869197014e-05,
+          0.9999999993737683,
+          -2.600187053133747
+        ],
+        [
+          -0.9999999994459405,
+          -4.874701108553446e-06,
+          3.292955429209582e-05,
+          1.7817570535269553
+        ],
+        [
+          4.874274158257982e-06,
+          -0.9999999999040666,
+          -1.2965633384056268e-05,
+          24.241403671278746
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "baked_frame": "original asset local frame, meters; original visual/collision origins unchanged",
+      "audit_method": {
+        "method": "asymmetric PRINT->old, exact point-to-triangle, 0.3 then 0.15 mm distance-trimmed point-to-plane ICP, 0.02 mm Huber; start dominant proper signed permutation near shared-shell fit",
+        "reason": "missing old extension never enters alignment objective; new print surfaces farther than 0.15 mm are excluded from pose updates but INCLUDED in final full-surface deviation",
+        "iterations": 9,
+        "kept_sampled_correspondences": 3425,
+        "total_alignment_print_samples": 4096,
+        "last_least_squares_rank": 6,
+        "degrees_of_freedom": 6,
+        "global_optimum_guaranteed": false
+      },
+      "registration_is_calibration": false
+    },
+    "moving_jaw_body.stl": {
+      "source": "sources/moving_jaw_raw_mm.npz",
+      "transform_raw_mm_to_old_asset_mm": [
+        [
+          -0.014390232225543809,
+          8.311064391161307e-05,
+          0.9998964517934426,
+          -0.11848587644107168
+        ],
+        [
+          -0.9998964476524442,
+          0.00012205836318620557,
+          -0.014390242311347414,
+          -8.295706441484745
+        ],
+        [
+          -0.0001232417065661424,
+          -0.9999999890971881,
+          8.134558941800983e-05,
+          -0.0042829466732258155
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "baked_frame": "original asset local frame, meters; original visual/collision origins unchanged",
+      "audit_method": "Tested 4 proper signed axis permutations mapping print [z,x,y] to old [x,y,z], 9 bound-end translation seeds each; translation-only trimmed coarse matching; top5 distinct candidates asymmetric print->old distance-trimmed point-to-triangle ICP; chosen largest PRINT area coverage within 0.05 mm, then capped mean distance. No scale/reflection fitted.",
+      "registration_is_calibration": false
+    },
+    "fixed_fin.stl": {
+      "source": "sources/source_finger_fin.npz",
+      "T_parent_from_source_m": [
+        [
+          -0.0867219338974965,
+          0.996193570120021,
+          -0.00881345747167762,
+          -0.10691272972833525
+        ],
+        [
+          -0.10147889988852546,
+          -3.261089668243198e-05,
+          0.9948376911908511,
+          0.0006571118736587067
+        ],
+        [
+          0.991050623862622,
+          0.08716862846263093,
+          0.10109545565182902,
+          -0.16497151418080291
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "baked_frame": "gripper link, meters; added fixed joint identity",
+      "physical_mount_verification": "Not inferred by builder; explicit caller-provided transform"
+    },
+    "moving_fin.stl": {
+      "source": "sources/source_finger_fin.npz",
+      "T_parent_from_source_m": [
+        [
+          0.052060433728774454,
+          -0.9986300313596556,
+          0.005269886771721888,
+          0.08721674646032102
+        ],
+        [
+          0.9934828666834442,
+          0.05232646711629778,
+          0.101260725089116,
+          -0.14156711219489154
+        ],
+        [
+          -0.10139775562811229,
+          -3.613505076179758e-05,
+          0.9948459648849357,
+          0.01791472686486218
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "baked_frame": "jaw link, meters; added fixed joint identity",
+      "physical_mount_verification": "Not inferred by builder; explicit caller-provided transform"
+    },
+    "bracket_34.stl": {
+      "source": "sources/bracket_34_raw_mm.npz",
+      "T_mount_link_from_source_m": [
+        [
+          0.0002251587449946388,
+          0.42262545229528337,
+          0.9063044060224728,
+          -0.007777407212286692
+        ],
+        [
+          0.9999997337782935,
+          -0.000724205482472675,
+          8.92735200166504e-05,
+          0.032374341670975026
+        ],
+        [
+          0.0006940798814056975,
+          0.9063041446438532,
+          -0.42262550284441175,
+          0.0740077948466826
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "baked_frame": "gripper_camera_mount link, meters",
+      "shape_ICP_used_as_calibration": false
+    }
+  },
+  "mesh_checks": {
+    "fixed_palm.stl": {
+      "vertex_count": 19815,
+      "triangle_count": 39690,
+      "bounds_m": [
+        [
+          -0.035200269100735954,
+          -0.02421858451062185,
+          -5.038200037012786e-05
+        ],
+        [
+          0.029999675606968465,
+          0.02778215949118159,
+          0.048533338149987504
+        ]
+      ],
+      "extents_m": [
+        0.06519994470770442,
+        0.05200074400180344,
+        0.04858372015035763
+      ],
+      "surface_area_m2": 0.016010847703306918,
+      "signed_shell_volume_m3": 4.45477096418551e-05,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "index_connected_components": 1,
+      "limitations": "Indexed topology only; self-intersection, contact safety and TPU deformation not validated. No mesh repair performed."
+    },
+    "moving_jaw_body.stl": {
+      "vertex_count": 9333,
+      "triangle_count": 18714,
+      "bounds_m": [
+        [
+          -0.010332939712909012,
+          -0.026668023911643517,
+          -0.024004385719999178
+        ],
+        [
+          0.010001404363888407,
+          0.009999976785739042,
+          0.023997172569166825
+        ]
+      ],
+      "extents_m": [
+        0.02033434407679742,
+        0.03666800069738256,
+        0.048001558289166
+      ],
+      "surface_area_m2": 0.005773142297788077,
+      "signed_shell_volume_m3": 8.693591584260784e-06,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "index_connected_components": 1,
+      "limitations": "Indexed topology only; self-intersection, contact safety and TPU deformation not validated. No mesh repair performed."
+    },
+    "fin_source.stl": {
+      "vertex_count": 1706,
+      "triangle_count": 3480,
+      "bounds_m": [
+        [
+          0.05052371597290039,
+          0.08181722259521484,
+          0.0
+        ],
+        [
+          0.11770692443847657,
+          0.10600564575195312,
+          0.024059436798095704
+        ]
+      ],
+      "extents_m": [
+        0.06718320846557618,
+        0.024188423156738276,
+        0.024059436798095704
+      ],
+      "surface_area_m2": 0.014066035974010294,
+      "signed_shell_volume_m3": 1.0213732098287493e-05,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "index_connected_components": 1,
+      "limitations": "Indexed topology only; self-intersection, contact safety and TPU deformation not validated. No mesh repair performed."
+    },
+    "fixed_fin.stl": {
+      "vertex_count": 1706,
+      "triangle_count": 3480,
+      "bounds_m": [
+        [
+          -0.03529782715917336,
+          -0.01119511240035353,
+          -0.10475247959044443
+        ],
+        [
+          -0.007064721766065499,
+          0.012892923841370873,
+          -0.03936756371590655
+        ]
+      ],
+      "extents_m": [
+        0.02823310539310786,
+        0.024088036241724405,
+        0.06538491587453787
+      ],
+      "surface_area_m2": 0.014066035974010283,
+      "signed_shell_volume_m3": 1.0213732098287541e-05,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "index_connected_components": 1,
+      "limitations": "Indexed topology only; self-intersection, contact safety and TPU deformation not validated. No mesh repair performed."
+    },
+    "moving_fin.stl": {
+      "vertex_count": 1706,
+      "triangle_count": 3480,
+      "bounds_m": [
+        [
+          -0.015189678139390872,
+          -0.08483025498452001,
+          0.006071612442944978
+        ],
+        [
+          0.011446261404610594,
+          -0.019251647877909478,
+          0.03015973761331397
+        ]
+      ],
+      "extents_m": [
+        0.026635939544001466,
+        0.06557860710661054,
+        0.02408812517036899
+      ],
+      "surface_area_m2": 0.014066035974010299,
+      "signed_shell_volume_m3": 1.0213732098287556e-05,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "index_connected_components": 1,
+      "limitations": "Indexed topology only; self-intersection, contact safety and TPU deformation not validated. No mesh repair performed."
+    },
+    "bracket_34.stl": {
+      "vertex_count": 18505,
+      "triangle_count": 37070,
+      "bounds_m": [
+        [
+          -0.03444187547381126,
+          0.011731970982940161,
+          0.043979494619072634
+        ],
+        [
+          0.008150637883855685,
+          0.05300274966033674,
+          0.11007341033371038
+        ]
+      ],
+      "extents_m": [
+        0.04259251335766694,
+        0.04127077867739658,
+        0.06609391571463774
+      ],
+      "surface_area_m2": 0.04034779264147643,
+      "signed_shell_volume_m3": 5.8767270764326075e-05,
+      "zero_area_triangles": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "index_connected_components": 20,
+      "limitations": "Indexed topology only; self-intersection, contact safety and TPU deformation not validated. No mesh repair performed."
+    }
+  },
+  "stl_float32_max_vertex_roundtrip_error_m": {
+    "fixed_palm.stl": 1.8624907865971707e-09,
+    "moving_jaw_body.stl": 9.311363381725446e-10,
+    "fin_source.stl": 3.6954879850670252e-09,
+    "fixed_fin.stl": 3.7113024597967836e-09,
+    "moving_fin.stl": 3.70674364813528e-09,
+    "bracket_34.stl": 3.725142555532912e-09
+  },
+  "structural_checks": {
+    "revolute_joints_exact": [
+      "6",
+      "5",
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "original_joints_and_transmissions_exact": true,
+    "all_original_inertials_exact": true,
+    "urdf_graph": {
+      "root": "base",
+      "links": 12,
+      "joints": 11
+    },
+    "runtime_geometry": {
+      "legacy_longfinger_mesh_refs_absent": true,
+      "legacy_bracket_mesh_refs_absent": true,
+      "fin_link_count": 2,
+      "fin_parent_links": {
+        "fixed_soft_fin": "gripper",
+        "moving_soft_fin": "jaw"
+      },
+      "all_runtime_mesh_refs_relative_and_local": true
+    }
+  },
+  "uncertainties": [
+    "Fin and bracket placements absent unless supplied explicitly in assembly.json",
+    "Configured fin A/A and bracket A are geometric candidates only: alternative fin B/B and bracket two-hole reversal remain physically possible; no physical installation acceptance",
+    "Caller-provided assembly transforms and geometric stage completion do not establish physical calibration",
+    "Legacy 38mm camera board / 34mm hole pattern does not match bracket 27mm grid; camera_module and handeye_cam visuals must be excluded from tracking conversion",
+    "Original inherited camera pose not verified for new hardware",
+    "Original masses/inertia retained; not recomputed or validated",
+    "TPU deformation, self-intersection, collision safety and live-robot agreement not validated",
+    "Palm/jaw shape registrations are geometric fits, not new joint or hand-eye calibration"
+  ],
+  "generated_files_sha256": {
+    "so101_soft_fin_with_handeye.urdf": "e1ddb39daeb0a136ad0c5e27914bd31de1fb7b5fdbc55bbca23e6cdb2d916865",
+    "assets/soft_fin/fixed_palm.stl": "ee54acd7a0ba08ccaaef27386f50c20b5c9eb31d257d07df4785f9c73978704c",
+    "assets/soft_fin/moving_jaw_body.stl": "849aadc0e51c8250b1b2a9ddab242af6029c9fccf2ebe17b48f869eda6f02060",
+    "assets/soft_fin/fin_source.stl": "6f41bb442ef399827c61e92e9bd6b3d428f6a8619ee3fa5f04e9e1018c3d1fee",
+    "assets/soft_fin/fixed_fin.stl": "74967ae5a88062f19566b952014bd8e05cfc5b10f8fa136250072a412eda3fb3",
+    "assets/soft_fin/moving_fin.stl": "b684e66403dc2badfac33c554d9fb74c71af978e667b097016b3fc4d8987dff5",
+    "assets/soft_fin/bracket_34.stl": "7916826d75a051530a9bbb49c36237e3863580da01f33278c22416222593eb92"
+  }
+}

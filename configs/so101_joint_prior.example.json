@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "robot_model": "../../../target/so101-lerobot-soft-fin/robot/robot.json",
+  "initialization": "../../../target/so101-lerobot-soft-fin/initialization.json",
+  "cache_directory": "../../../target/so101-lerobot-soft-fin/cache",
+  "model_divides": 2,
+  "model_points": 200,
+  "model_image_size": 512,
+  "correspondence_iterations": 3,
+  "update_iterations": 2,
+  "joint_priors": {
+    "service_name": "joint-state",
+    "controller_id": "so101-controller",
+    "required": false,
+    "time_basis": "received",
+    "mappings": [
+      {
+        "arm": "so101_left",
+        "joint": "shoulder_pan",
+        "source_arm": "left",
+        "source_joint": "shoulder_pan",
+        "scale_rad_per_unit": 0.017453292519943295,
+        "offset_rad": 0,
+        "standard_deviation_rad": 0.1
+      },
+      {
+        "arm": "so101_left",
+        "joint": "shoulder_lift",
+        "source_arm": "left",
+        "source_joint": "shoulder_lift",
+        "scale_rad_per_unit": 0.017453292519943295,
+        "offset_rad": 0,
+        "standard_deviation_rad": 0.1
+      },
+      {
+        "arm": "so101_left",
+        "joint": "elbow_flex",
+        "source_arm": "left",
+        "source_joint": "elbow_flex",
+        "scale_rad_per_unit": 0.017453292519943295,
+        "offset_rad": 0,
+        "standard_deviation_rad": 0.1
+      },
+      {
+        "arm": "so101_left",
+        "joint": "wrist_flex",
+        "source_arm": "left",
+        "source_joint": "wrist_flex",
+        "scale_rad_per_unit": 0.017453292519943295,
+        "offset_rad": 0,
+        "standard_deviation_rad": 0.1
+      },
+      {
+        "arm": "so101_right",
+        "joint": "shoulder_pan",
+        "source_arm": "right",
+        "source_joint": "shoulder_pan",
+        "scale_rad_per_unit": 0.017453292519943295,
+        "offset_rad": 0,
+        "standard_deviation_rad": 0.1
+      },
+      {
+        "arm": "so101_right",
+        "joint": "shoulder_lift",
+        "source_arm": "right",
+        "source_joint": "shoulder_lift",
+        "scale_rad_per_unit": 0.017453292519943295,
+        "offset_rad": 0,
+        "standard_deviation_rad": 0.1
+      },
+      {
+        "arm": "so101_right",
+        "joint": "elbow_flex",
+        "source_arm": "right",
+        "source_joint": "elbow_flex",
+        "scale_rad_per_unit": 0.017453292519943295,
+        "offset_rad": 0,
+        "standard_deviation_rad": 0.1
+      },
+      {
+        "arm": "so101_right",
+        "joint": "wrist_flex",
+        "source_arm": "right",
+        "source_joint": "wrist_flex",
+        "scale_rad_per_unit": 0.017453292519943295,
+        "offset_rad": 0,
+        "standard_deviation_rad": 0.1
+      }
+    ]
+  }
+}

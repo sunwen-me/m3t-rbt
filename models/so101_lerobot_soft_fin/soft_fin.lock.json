@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "model": "LeRobot SO101 follower with soft fins and #34 accessory bracket",
+  "official_lock": {
+    "path": "upstream.lock.json",
+    "sha256": "3ea09b687f8a09a8757d73f1b4a5e0e60ef0f9961da78a0e381134214621ac03"
+  },
+  "inputs": [
+    {
+      "path": "sources/soft_fin_reference.urdf",
+      "sha256": "e1ddb39daeb0a136ad0c5e27914bd31de1fb7b5fdbc55bbca23e6cdb2d916865",
+      "role": "frozen legacy model geometry/frame reference only"
+    },
+    {
+      "path": "sources/prior_assembly.json",
+      "sha256": "0bb074e2583e735dfedf2496a26eb1233db58ca730ba0247a9de61d48114b77b",
+      "role": "prior reviewed assembly snapshot"
+    },
+    {
+      "path": "sources/prior_assembly_decisions.json",
+      "sha256": "79435e4851e9678cb63e9afa7abc0a419f9ea29225a4061ed158b3ac10e5b522",
+      "role": "prior reviewed assembly decision snapshot"
+    },
+    {
+      "path": "sources/prior_assembly_before_bracket_flip.json",
+      "sha256": "64cf68d95b315bca9f1ea00b67b098f893185f6aa85c5476dd3bb87db4a81cd0",
+      "role": "prior pre-correction assembly snapshot"
+    },
+    {
+      "path": "sources/prior_model_provenance.json",
+      "sha256": "a42c8b1a2e2f80c44e1751f937ea62f9cdf42705f598981fdccc45db2136c567",
+      "role": "prior model build provenance snapshot"
+    },
+    {
+      "path": "assets/soft_fin/fixed_palm.stl",
+      "sha256": "ee54acd7a0ba08ccaaef27386f50c20b5c9eb31d257d07df4785f9c73978704c",
+      "role": "reused reviewed custom geometry"
+    },
+    {
+      "path": "assets/soft_fin/moving_jaw_body.stl",
+      "sha256": "849aadc0e51c8250b1b2a9ddab242af6029c9fccf2ebe17b48f869eda6f02060",
+      "role": "reused reviewed custom geometry"
+    },
+    {
+      "path": "assets/soft_fin/fixed_fin.stl",
+      "sha256": "74967ae5a88062f19566b952014bd8e05cfc5b10f8fa136250072a412eda3fb3",
+      "role": "reused reviewed custom geometry"
+    },
+    {
+      "path": "assets/soft_fin/moving_fin.stl",
+      "sha256": "b684e66403dc2badfac33c554d9fb74c71af978e667b097016b3fc4d8987dff5",
+      "role": "reused reviewed custom geometry"
+    },
+    {
+      "path": "assets/soft_fin/bracket_34.stl",
+      "sha256": "7916826d75a051530a9bbb49c36237e3863580da01f33278c22416222593eb92",
+      "role": "reused reviewed custom geometry"
+    }
+  ],
+  "custom_geometry_license": {
+    "status": "not specified by source project files",
+    "note": "No license claim is inferred for reused project geometry. The LeRobot official model has its own license record in upstream.lock.json."
+  },
+  "source_project": "perception/m3t/models/so101_soft_fin"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "robot_model": "../generated/so101/robot.json",
+  "initialization": "../generated/so101/initialization.json",
+  "cache_directory": "../generated/so101/cache",
+  "model_divides": 2,
+  "model_points": 200,
+  "model_image_size": 512,
+  "correspondence_iterations": 3,
+  "update_iterations": 2,
+  "secondary_camera": {
+    "provider": "orbbec-secondary",
+    "serial": "REPLACE_WITH_SECONDARY_SERIAL",
+    "coordinate_frame": "secondary/color_optical",
+    "camera_in_primary": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+    "maximum_skew_ms": 20,
+    "time_basis": "capture"
+  }
+}
